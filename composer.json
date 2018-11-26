@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "R4free\\Generators\\":"src"
+      "Generators\\":"src"
     }
   },
   "config": {
