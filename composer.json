@@ -37,6 +37,7 @@
   "extra": {
     "laravel": {
       "providers": [
+        "Generators\\Providers\\GeneratorServiceProvider"
       ]
     }
   },
