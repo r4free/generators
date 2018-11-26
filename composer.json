@@ -32,12 +32,12 @@
     "preferred-install": "dist"
   },
   "suggest": {
-    "league/fractal": "Required to use with generators"
+    
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Generators\\Providers\\GeneratorServiceProvider"
+        "R4free\\Generators\\Providers\\GeneratorServiceProvider"
       ]
     }
   },
