@@ -1,0 +1,15 @@
+<?php
+
+$NAMESPACE$
+
+/**
+ * Class $CLASS$.
+ *
+ * @package $NAMESPACE$
+ */
+class $CLASS$ extends BaseModel
+{
+
+    protected $fillable = [];
+
+}

@@ -1,0 +1,82 @@
+<?php
+
+$NAMESPACE$
+use App\Http\Controllers\Controller;
+use $APPNAME$Http\Requests\$CLASS$CreateRequest;
+use $APPNAME$Http\Requests\$CLASS$UpdateRequest;
+use $APPNAME$Http\Resources\$RESOURCE$;
+use $APPNAME$$MODELPATH$\$CLASS$;
+
+
+class $CONTROLLER$Controller extends Controller
+{
+
+    protected $SINGULAR;
+
+    public function __construct($CLASS$ $$SINGULAR$)
+    {
+        $this->$SINGULAR$ = $$SINGULAR$;
+    }
+
+    /**
+     * @return $RESOURCE$
+     */
+    public function index()
+    {
+        $$PLURAL$ = $this->$SINGULAR$->paginate(request()->input('paginate'));
+
+        return new $RESOURCE$($$PLURAL$);
+
+    }
+
+    /**
+     * @param $CLASS$CreateRequest $request
+     * @return $RESOURCE$
+     */
+    public function store($CLASS$CreateRequest $request)
+    {
+          $$SINGULAR$ = $this->$SINGULAR$->create($request->all());
+
+          return new $RESOURCE$($$SINGULAR$);
+
+    }
+    /**
+     * @param $id
+     * @return $RESOURCE$
+     */
+    public function show($id)
+    {
+        $$SINGULAR$ = $this->$SINGULAR$->findOrFail($id);
+
+        return new $RESOURCE$($$SINGULAR$) ;
+
+    }
+
+    /**
+     * @param $CLASS$UpdateRequest $request
+     * @param $id
+     * @return $RESOURCE$
+     */
+    public function update($CLASS$UpdateRequest $request, $id)
+    {
+          $$SINGULAR$ = $this->$SINGULAR$->findOrFail($id);
+
+          $$SINGULAR$->update($request->all());
+
+          return new $RESOURCE$($$SINGULAR$) ;
+
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy($id)
+    {
+           $$SINGULAR$ = $this->$SINGULAR$->findOrFail($id);
+            $$SINGULAR$->delete();
+
+
+        return response()->json(['message'=>'$SINGULAR$ deleted']);
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "r4free/generators",
+  "description": "Laravel 5 - Generates modules, entities for web and api´s",
+  "keywords": ["laravel", "repository", "eloquent", "model", "cache"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rafael Miranda",
+      "homepage": "https://github.com/r4free",
+      "email": "r4free@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "http://andersao.github.io/l5-repository",
+  "support": {
+    "email": "r4free@gmail.com"
+  },
+  "require": {
+    "illuminate/http": "~5.0",
+    "illuminate/config": "~5.0",
+    "illuminate/support": "~5.0",
+    "illuminate/database": "~5.0",
+    "illuminate/pagination": "~5.0",
+    "illuminate/console": "~5.0",
+    "illuminate/filesystem": "~5.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "R4free\\Generators\\":"src"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "suggest": {
+    "league/fractal": "Required to use with generators"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Prettus\\Repository\\Providers\\RepositoryServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
