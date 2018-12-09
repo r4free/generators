@@ -11,7 +11,6 @@
       "role": "Developer"
     }
   ],
-  "homepage": "http://andersao.github.io/l5-repository",
   "support": {
     "email": "r4free@gmail.com"
   },
@@ -26,19 +25,19 @@
   },
   "autoload": {
     "psr-4": {
-      "R4free\\Generators\\":"src"
+      "Generators\\":"src"
     }
   },
   "config": {
     "preferred-install": "dist"
   },
   "suggest": {
-    "league/fractal": "Required to use with generators"
+    
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Prettus\\Repository\\Providers\\RepositoryServiceProvider"
+        
       ]
     }
   },
